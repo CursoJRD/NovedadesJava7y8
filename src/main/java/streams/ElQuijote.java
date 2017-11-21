@@ -1,12 +1,15 @@
 package streams;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ElQuijote {
@@ -25,9 +28,11 @@ public class ElQuijote {
     }
 
     private void ejecuta() {
-        cuentaLineas();
-        cuentaPalabras();
-        cuentaAparicionesPalabra("en");
+//        cuentaLineas();
+//        cuentaPalabras();
+//        cuentaAparicionesPalabra("Sancho");
+//        diccionarioDePalabras();
+        palabraMasRepetida();
     }
 
 
@@ -35,7 +40,7 @@ public class ElQuijote {
             long palabras = texto
                     .map(s -> s.split(" "))
                     .count();
-            
+
             System.out.println("Lineas: " + palabras);
     }
 
@@ -56,5 +61,30 @@ public class ElQuijote {
                     .count();
 
             System.out.println(palabra + ": " + palabras);
+    }
+
+    private void diccionarioDePalabras() {
+        Map<String, Long> diccionario = texto
+                .map(s -> s.split(" "))
+                .flatMap(a -> Arrays.stream(a))
+                .map(s -> s.toUpperCase())
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        System.out.println(diccionario);
+    }
+
+    private void palabraMasRepetida() {
+        Map<String, Long> diccionario = texto
+                .map(s -> s.split(" "))
+                .flatMap(a -> Arrays.stream(a))
+                .map(s -> s.toUpperCase())
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        Entry<String, Long> maximo = diccionario.entrySet()
+                .stream()
+                .max(Entry.comparingByValue(Comparator.naturalOrder())) // No es necesario Comparator.naturalOrder()
+                .get();
+
+        System.out.println(maximo);
     }
 }
