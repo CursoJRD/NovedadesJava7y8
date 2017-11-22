@@ -29,19 +29,18 @@ public class ElQuijote {
 
     private void ejecuta() {
 //        cuentaLineas();
-//        cuentaPalabras();
+        cuentaPalabras();
 //        cuentaAparicionesPalabra("Sancho");
 //        diccionarioDePalabras();
-        palabraMasRepetida();
+//        palabraMasRepetida();
     }
 
 
     private void cuentaLineas() {
-            long palabras = texto
-                    .map(s -> s.split(" "))
+            long lineas = texto
                     .count();
 
-            System.out.println("Lineas: " + palabras);
+            System.out.println("Lineas: " + lineas);
     }
 
     private void cuentaPalabras() {
