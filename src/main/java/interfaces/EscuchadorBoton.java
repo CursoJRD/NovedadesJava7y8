@@ -14,5 +14,16 @@ public class EscuchadorBoton {
                 System.out.println("Pulsaste el botón");
             }
         });
+
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Pusaste el botón");
+            }
+        };
+
+//        ActionListener listener = (e) -> System.out.println("Pulsate el botón");
+//
+//        jButton.addActionListener((e) -> System.out.println("Pulsaste el botón"));
     }
 }

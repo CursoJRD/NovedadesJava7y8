@@ -8,6 +8,6 @@ public class Main {
         System.out.println(utilidad.calculaSuma());
 
         System.out.println(InterfazHija.isMultiploDe(2,4));
-        InterfazHija.isMultiploDeCinco(5);
+//        InterfazHija.isMultiploDeCinco(5);
     }
 }
