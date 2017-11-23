@@ -1,7 +1,6 @@
 package streams;
 
 public class Persona {
-    private static G
     private String nombre;
     private String apellidos;
     private String nif;
@@ -16,7 +15,7 @@ public class Persona {
         this.poblacion = poblacion;
     }
 
-    public static Persona aleatoria() {
-        String nombre =
-    }
+//    public static Persona aleatoria() {
+//        String nombre =
+//    }
 }
