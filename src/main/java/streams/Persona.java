@@ -1,6 +1,5 @@
 package streams;
 
-import com.sun.org.apache.bcel.internal.generic.ARRAYLENGTH;
 import es.uji.belfern.generador.GeneradorDatosINE;
 
 import java.util.ArrayList;
@@ -24,41 +23,8 @@ public class Persona {
         this.poblacion = poblacion;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public String getNif() {
-        return nif;
-    }
-
     public String getProvincia() {
         return provincia;
-    }
-
-    public String getPoblacion() {
-        return poblacion;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Persona{");
-        sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", apellidos='").append(apellidos).append('\'');
-        sb.append(", edad=").append(edad);
-        sb.append(", nif='").append(nif).append('\'');
-        sb.append(", provincia='").append(provincia).append('\'');
-        sb.append(", poblacion='").append(poblacion).append('\'');
-        sb.append('}');
-        return sb.toString();
     }
 
     public static Persona aleatoria() {
@@ -80,5 +46,18 @@ public class Persona {
             personas.add(aleatoria());
 
         return personas;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Persona{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", apellidos='").append(apellidos).append('\'');
+        sb.append(", edad=").append(edad);
+        sb.append(", nif='").append(nif).append('\'');
+        sb.append(", provincia='").append(provincia).append('\'');
+        sb.append(", poblacion='").append(poblacion).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
