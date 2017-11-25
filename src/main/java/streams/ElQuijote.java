@@ -35,10 +35,16 @@ public class ElQuijote {
     private void ejecuta() {
 //        cuentaLineas();
 //        cuentaLineasSinStreams();
-//        cuentaPalabras();
+//        long inicio = System.currentTimeMillis();
 //        cuentaPalabrasSinStreams();
+//        long fin = System.currentTimeMillis();
+//        System.out.println((fin-inicio)/1000. + " segundos.");
+//        inicio = System.currentTimeMillis();
+//        cuentaPalabras();
+//        fin = System.currentTimeMillis();
+//        System.out.println((fin-inicio)/1000. + " segundos.");
 //        cuentaAparicionesPalabra("Sancho");
-//        cuentaAparicionesPalabraSinStreams("Sancho");
+//        cuentaAparicionesPalabraSinStreams("Rocinante");
 //        diccionarioDePalabras();
         palabraMasRepetida();
     }
