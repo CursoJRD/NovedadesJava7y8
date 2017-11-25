@@ -39,9 +39,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.oscarbelmon</groupId>
+            <groupId>com.github.CursoJRD</groupId>
             <artifactId>GeneradorDatosINE</artifactId>
-            <version>master</version>
+            <version>0.0.4</version>
         </dependency>
     </dependencies>
 </project>
