@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>es.uji.belfern</groupId>
     <artifactId>EjemplosJava7y8</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
@@ -16,8 +18,7 @@
                   scm:git:git@github.com:CursoJRD/NovedadesJava7y8.git
                     </connection> 
                       <url>https://github.com/CursoJRD/NovedadesJava7y8</url>
-                    <tag>EjemplosJava7y8_1.0</tag>
-  </scm>
+                  </scm>
 
 
 
@@ -55,7 +56,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>es.uji.belfern</groupId>
+            <groupId>com.github.CursoJRD</groupId>
             <artifactId>GeneradorDatosINE</artifactId>
             <version>0.0.5</version>
         </dependency>
