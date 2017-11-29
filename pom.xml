@@ -56,7 +56,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.github.CursoJRD</groupId>
+            <groupId>es.uji.belfern</groupId>
             <artifactId>GeneradorDatosINE</artifactId>
             <version>0.0.5</version>
         </dependency>
