@@ -33,20 +33,17 @@ public class ElQuijote {
     }
 
     private void ejecuta() {
-//        cuentaLineas();
-//        cuentaLineasSinStreams();
-//        long inicio = System.currentTimeMillis();
+        cuentaLineasSinStreams();
+        cuentaLineas();
+
 //        cuentaPalabrasSinStreams();
-//        long fin = System.currentTimeMillis();
-//        System.out.println((fin-inicio)/1000. + " segundos.");
-//        inicio = System.currentTimeMillis();
 //        cuentaPalabras();
-//        fin = System.currentTimeMillis();
-//        System.out.println((fin-inicio)/1000. + " segundos.");
-//        cuentaAparicionesPalabra("Sancho");
+
 //        cuentaAparicionesPalabraSinStreams("Rocinante");
+//        cuentaAparicionesPalabra("Sancho");
+
 //        diccionarioDePalabras();
-        palabraMasRepetida();
+//        palabraMasRepetida();
     }
 
 
@@ -61,7 +58,9 @@ public class ElQuijote {
         try {
             BufferedReader br = new BufferedReader(new FileReader(EL_QUIJOTE_TXT));
             int lineas = 0;
-            while((br.readLine()) != null) lineas++;
+            while((br.readLine()) != null) {
+                lineas++;
+            }
             System.out.println("Lineas: " + lineas);
             br.close();
         } catch (FileNotFoundException e) {
