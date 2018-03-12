@@ -13,7 +13,7 @@ public class EjemploOptional {
         ejemplo.muestraPersona("123");
 //        ejemplo.muestraPersonaNullObject("");
 //        ejemplo.muestraPersonaOptional("0");
-    }   
+    }
 
     private void muestraPersona(String nif) {
         Persona persona;
