@@ -10,16 +10,16 @@ public class EjemploOptional {
 
     public static void main(String[] args) {
         EjemploOptional ejemplo =new EjemploOptional();
-//        ejemplo.ejecuta();
-        ejemplo.muestraPersonaOptional("0");
+        ejemplo.muestraPersona("123");
 //        ejemplo.muestraPersonaNullObject("");
-    }
+//        ejemplo.muestraPersonaOptional("0");
+    }   
 
     private void muestraPersona(String nif) {
         Persona persona;
-        if((persona = buscaPersonaPorNIF(nif)) != null)
+        if((persona = buscaPersonaPorNIF(nif)) != null) {
             System.out.println(persona);
-        else System.out.println("No encontrada");
+        } else System.out.println("No encontrada");
     }
 
     private void muestraPersonaNullObject(String nif) {
@@ -28,8 +28,9 @@ public class EjemploOptional {
 
     private Persona buscaPersonaPorNIFNullObject(String nif) {
         for(Persona persona: personas)
-            if(persona.nif.equalsIgnoreCase(nif))
+            if(persona.nif.equalsIgnoreCase(nif)) {
                 return persona;
+            }
 
         return PERSONA_NO_ENCONTRADA;
     }
